@@ -70,7 +70,7 @@ export const deleteData = (delId) => (dispatch) => {
 export const updateData = (item) => (dispatch) => {
   dispatch({ type: GET_UPDATE_FRIENDS });
 
-  axios
+  axiosWithAuth()
     .put(`/friends/${item.id}`, item)
     .then((res) => {
       console.log(res);
