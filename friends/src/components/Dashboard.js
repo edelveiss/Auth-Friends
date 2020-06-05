@@ -62,6 +62,7 @@ function Dashboard(props) {
           <button
             style={{
               marginLeft: "2rem",
+              marginRight: "4rem",
               color: "white",
               border: "1px solid white",
             }}
@@ -70,7 +71,7 @@ function Dashboard(props) {
           </button>
         </Link>
       </div>
-      <Grid container spacing={3}>
+      <Grid container spacing={3} style={{ marginTop: "2rem" }}>
         {props.friends.map((friend) => (
           <FriendCard key={friend.id} friend={friend} />
         ))}
