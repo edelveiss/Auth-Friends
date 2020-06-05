@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { connect } from "react-redux";
 import { updateData } from "../actions";
 import { makeStyles } from "@material-ui/core/styles";
 import Card from "@material-ui/core/Card";
 import CardActions from "@material-ui/core/CardActions";
 import Button from "@material-ui/core/Button";
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles({
   root: {
@@ -17,8 +16,6 @@ const useStyles = makeStyles({
 });
 
 function UpdateForm(props) {
-  const classes = useStyles();
-
   const inputChange = (e) => {
     const newEditData = {
       ...props.editState,
@@ -38,21 +35,23 @@ function UpdateForm(props) {
     props.toggle();
   };
   return (
-    <Card>
-      <form onSubmit={formSubmit}>
-        <h2>
-          {" "}
+    <Card className="userCard">
+      <form onSubmit={formSubmit} style={{ width: "90%" }}>
+        <p>
+          {`Name:`}
           <input
+            className="inputUpdate"
             id="name"
             type="text"
             name="name"
             onChange={inputChange}
             defaultValue={props.friend.name}
           />
-        </h2>
+        </p>
         <p>
-          age:{" "}
+          {`Age:    `}
           <input
+            className="inputUpdate"
             id="age"
             type="text"
             name="age"
@@ -61,7 +60,9 @@ function UpdateForm(props) {
           />
         </p>
         <p>
+          {`Email:`}
           <input
+            className="inputUpdate"
             id="email"
             type="email"
             name="email"

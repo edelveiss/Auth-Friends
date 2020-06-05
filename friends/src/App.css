@@ -32,12 +32,20 @@
   margin-top: 1.5rem;
 }
 .grid {
-  width: 90%;
+  background: url("./assets/dashboard-hero.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: auto;
+  padding-bottom: 2rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 .nav-button {
   width: 100%;
@@ -79,4 +87,13 @@ button:hover {
 .card-button:hover {
   background-color: #404fb3 !important;
   color: white;
+}
+.inputUpdate {
+  font-size: 1rem;
+  margin-left: 1rem;
+  padding: 0.06rem;
+}
+.userCard {
+  width: 80%;
+  opacity: 0.7;
 }

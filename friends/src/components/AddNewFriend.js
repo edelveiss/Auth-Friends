@@ -1,20 +1,19 @@
 import React, { useState } from "react";
-import { axiosWithAuth } from "../util/axiosWithAuth";
 import { Link } from "react-router-dom";
 import Avatar from "@material-ui/core/Avatar";
 import Button from "@material-ui/core/Button";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import TextField from "@material-ui/core/TextField";
 import { connect } from "react-redux";
-
 import { getPostData } from "../actions";
-
 import Paper from "@material-ui/core/Paper";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import Typography from "@material-ui/core/Typography";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
+import { green } from "@material-ui/core/colors";
+import Icon from "@material-ui/core/Icon";
 
 const AddNewFriend = (props) => {
   const classes = useStyles();
@@ -54,9 +53,6 @@ const AddNewFriend = (props) => {
           </Link>
         </div>
         <div className={classes.paper}>
-          <Avatar className={classes.avatar}>
-            <LockOutlinedIcon />
-          </Avatar>
           <Typography component="h1" variant="h5">
             Add New Friend
           </Typography>
@@ -96,6 +92,7 @@ const AddNewFriend = (props) => {
               margin="normal"
               required
               fullWidth
+              type="email"
               id="email"
               label="Email"
               name="email"

@@ -54,10 +54,20 @@ function Dashboard(props) {
     <div className="grid">
       <div className="nav-button">
         <Link to="/">
-          <button>Home</button>
+          <button style={{ color: "white", border: "1px solid white" }}>
+            Home
+          </button>
         </Link>
         <Link to="/add-friend">
-          <button style={{ marginLeft: "2rem" }}>Add New Friend</button>
+          <button
+            style={{
+              marginLeft: "2rem",
+              color: "white",
+              border: "1px solid white",
+            }}
+          >
+            Add New Friend
+          </button>
         </Link>
       </div>
       <Grid container spacing={3}>
