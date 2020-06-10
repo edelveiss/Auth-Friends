@@ -32,6 +32,7 @@ const AddNewFriend = (props) => {
   const formSubmit = (e) => {
     e.preventDefault();
     props.getPostData(user);
+    props.history.push("/dashboard");
     setUser({
       name: "",
       age: "",
